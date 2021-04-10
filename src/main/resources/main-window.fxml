@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="401.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hibernate.tutorial.controller.MainController">
+    <children>
+        <TabPane layoutY="-2.0" prefHeight="407.0" prefWidth="603.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Clients">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TableView fx:id="clientsTable" layoutX="10.0" layoutY="66.0" prefHeight="299.0" prefWidth="578.0">
+                                    <columns>
+                                        <TableColumn fx:id="clientNameColumn" prefWidth="90.0" text="Client" />
+                                        <TableColumn fx:id="clientProductsColumn" prefWidth="487.0" text="Product" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Product">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children>
+                                <TableView layoutX="21.0" layoutY="38.0" prefHeight="320.0" prefWidth="563.0">
+                                    <columns>
+                                        <TableColumn fx:id="productNameColumn" prefWidth="122.0" text="Product" />
+                                        <TableColumn fx:id="productClientsColumn" minWidth="0.0" prefWidth="321.0" text="Client" />
+                                        <TableColumn fx:id="productCategoryColumn" prefWidth="119.0" text="Category" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Category">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <TableView layoutX="14.0" layoutY="43.0" prefHeight="315.0" prefWidth="529.0">
+                                    <columns>
+                                        <TableColumn fx:id="categoryNameColumn" prefWidth="160.0" text="Category" />
+                              <TableColumn prefWidth="368.0" text="Products" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
